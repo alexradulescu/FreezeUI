@@ -34,6 +34,9 @@ a { color:inherit; }
 a:link, a:visited, a:hover, a:active { text-decoration:none; }
 a:focus, button:focus, input:focus, textarea:focus, select:focus { outline:1px dashed #f8f9fa; }
 
+strong { font-weight:600; }
+code { font-family:'Droid Sans Mono'; }
+
 
 /* NAVIGATION
 ____________________________________*/
@@ -46,25 +49,37 @@ ____________________________________*/
 .button { display:inline-block; line-height:4rem; border:.1rem solid #f8f9fa; border-radius:.2rem; color:#f8f9fa; background-color:#0b7285; padding:0 1.6rem; font-size:1.4rem; text-transform:uppercase; font-weight:600; margin-bottom:1.6rem; cursor:pointer; transition:color .25s, background-color .25s }
 .button:hover { color:#0b7285; background-color:#f8f9fa; }
 .button + .button { margin-left:1.6rem; }
+.link { border-bottom:1px dashed #f8f9fa; }
 
 
 /* HERO
 ____________________________________*/
-.hero { min-height:100vh; display:flex; align-items:center; justify-content:center; }
+.hero { min-height:100vh; width:90%; max-width:110rem; min-width:30rem; margin:auto; display:flex; align-items:center; justify-content:center; }
     .hero-center-content { text-align:center; }
 
 
 /* TYPOGRAPHY
 ____________________________________*/
-.title { font-size:11.2rem; font-weight:600; line-height:1.3; margin-bottom:2.4rem; }
-.heading-2 { font-size:5.6rem; line-height:1.4; margin:1.6rem 0; }
-.heading-3 { font-size:2.4rem; line-height:1.7; margin:1.6rem 0; }
+.title { font-size:calc(56px + (112 - 56) * ((100vw - 480px) / (1100 - 480))); font-weight:600; line-height:1.3; margin-bottom:2.4rem; }
+.heading-2 { font-size:calc(28px + (56 - 28) * ((100vw - 480px) / (1100 - 480))); font-weight:500; line-height:1.4; margin:1.6rem 0; }
+.heading-3 { font-size:calc(24px + (28 - 24) * ((100vw - 480px) / (1100 - 480))); font-weight:500; line-height:1.7; margin:1.6rem 0; }
 .heading-4 { font-size:1.8rem; line-height:1.7; margin:1.6rem 0; }
 .text { font-size:1.6rem; line-height:1.7; margin:1.6rem 0; }
+
+@media all and (max-width:480px) {
+    .title { font-size:5.6rem; }
+    .heading-2 { font-size:2.8rem; }
+    .heading-3 { font-size:2rem; line-height:1.4;  }
+    .heading-4 { font-size:1.6rem; line-height:1.4; }
+}
+@media all and (min-width:1100px) {
+    .title { font-size:11.2rem; }
+    .heading-2 { font-size:5.6rem; }
+    .heading-3 { font-size:2.4rem; }
+}
 
 
 /* FOOTER
 ____________________________________*/
 .footer { position:fixed; bottom:2.4rem; left:0; width:100%; text-align:center; }
-    .footer-link { display:inline-block; font-size:1.6rem; color:#83c8cf; }
-        .footer-link strong { font-weight:600; }
+    .footer-link { display:inline-block; font-size:1.6rem; color:#83c8cf; background-color:#0b7285; }

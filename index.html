@@ -9,7 +9,7 @@
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="http://hotel-larisa.com/">
 
-	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Raleway:400,500,600" rel="stylesheet">
 	<link href="./style.css" type="text/css" rel="stylesheet">
     <script>
         window.addEventListener('load', () => {
@@ -17,8 +17,6 @@
                 FreezeUI(); 
                 setTimeout(() => { UnFreezeUI(); }, 2000);    
             });
-            document.querySelector('.block-square').addEventListener('click', () => { FreezeUI({ selector: '.square', text: "Flying"}); });
-            document.querySelector('.un-block').addEventListener('click', () => { UnFreezeUI(); });
         });
     </script>
 </head>
@@ -37,8 +35,7 @@
                 No jQuery needed.
             </h3>
             <button class="button action-demo">See it in action</button>
-            <a class="button" href="#documentation">Documentation and Download</a>
-            <a class="button" href="https://github.com/alexandruradulescu/FreezeUI/projects/1">Roadmap</a>
+            <a class="button" href="#documentation">Documentation &amp; Download</a>
         </div>
     </section>
 
@@ -46,34 +43,50 @@
         <div class="hero-content">
             <h2 class="heading-2">Documentation</h2>
             <section class="section">
-                <h3 class="heading-3">Download</h3>
-                <p class="text">Go to the GitHub page and download the version which fits you best (ES5 or ES6, full code or minified).</p>
+                <h3 class="heading-3">1. Installation</h3>
+                <p class="text">
+                    Download the desire version (ES5 pr ES6, minified or development) from GitHub or call in the github CDN for testing (no uptime guarante, therefore unsuitable for production).
+                </p>
                 <a class="button" href="https://github.com/alexandruradulescu/FreezeUI/">GitHub</a>
+                <script async src="https://jsfiddle.net/76yd6oyn/16/embed/html/dark/"></script>
             </section>
             <section class="section">
-                <h3 class="heading-3">Call the script</h3>
-                <p class="text">Link the downloaded script in the head or at the end of the body as you like</p>
+                <h3 class="heading-3">2. Usage</h3>
+                <p class="text">
+                    The default styling is injected by default in the HEAD of the HTML document.
+                    <br/>
+                    There are only 2 functions to run: <strong><code>FreezeUI()</code></strong> and <strong><code>UnFreezeUI()</code></strong> which should be self-explainatory.
+                </p>
+                <script async src="https://jsfiddle.net/76yd6oyn/22/embed/js,html,result/dark/"></script>
             </section>
             <section class="section">
-                <h3 class="heading-3">Freeze the full UI</h3>
-                <p class="text">Simply call the FreezeUI() function similar to the example below.</p>
+                <h3 class="heading-3">3. Options</h3>
+                <p class="text">
+                    Optionally, you can pass in an a targeted selector where the freezing will be limited. And a custom loading text.
+                    <br/>
+                    <strong><code>FreezeUI({selector: '.class-name', text: 'Custom text'})</code></strong>
+                    <br/>
+                    The <strong><code>UnFreezeUI()</code></strong> function has no options
+                </p>
+                <script async src="https://jsfiddle.net/76yd6oyn/23/embed/js/dark/"></script>
             </section>
             <section class="section">
-                <h3 class="heading-3">Unfreeze the UI</h3>
-                <p class="text">Simply call the UnFreezeUI() function similar to the example below.</p>
-            </section>
-            <section class="section">
-                <h3 class="heading-3">Freeze only a piece of the UI</h3>
-                <p class="text">Call the FreezeUI({selector: '.class-name'}) function while passing an (options) object with the desired selector.</p>
-            </section>
-            <section class="section">
-                <h3 class="heading-3">Custom loading text</h3>
-                <p class="text">Call the FreezeUI({text: 'Magic is happening!'}) function while passing an (options) object with the desired text.</p>
+                <h3 class="heading-3">4. More</h3>
+                <p class="text">
+                    You can submit bugfixes or questions on GitHub, and see the small Roadmap also.
+                </p>
+                <a class="button" href="https://github.com/alexandruradulescu/FreezeUI/issues">Issues &amp; Questions</a>
+                <a class="button" href="https://github.com/alexandruradulescu/FreezeUI/projects/1">Roadmap</a>
+                <p class="text">
+                    Thanks to <strong><a href="http://carlosroso.com/notyf/" class="link" target="_blank">Notyf</a></strong> and <strong><a href="https://yeun.github.io/open-color/" class="link" target="_blank">OpenColor</a></strong> for the inspiration. Both are awesome projects.
+                </p>
+                <a class="button" target="_blank" href="http://carlosroso.com/notyf/">Notyf</a>
+                <a class="button" target="_blank" href="https://yeun.github.io/open-color/">OpenColor</a>
             </section>
         </div>
     </article>
 
-    <section class="hero">
+    <section class="hero" id="spread-the-love">
         <div class="hero-center-content">
             <h2 class="heading-2">Spread the &nbsp;&#10084;</h2>
             <h4 class="heading-4">
@@ -85,20 +98,10 @@
     </section>
 
     <footer class="footer">
-        <a href="http://alex-radulescu.com" class="footer-link">Made by <strong>Alex Radulescu</strong></a>
+        <a href="http://alex-radulescu.com" class="footer-link">Made by <strong>Alex Radulescu</strong></a> 
+        <a href="http://octus.com.sg" class="footer-link" target="_blank">at <strong>Octus</strong></a> 
     </footer>
 
-
-    <button class="block">
-        Block
-    </button>
-    <button class="block-square">
-        Block square
-    </button>
-    <button class="un-block">
-        Un-Block
-    </button>
-    <div class="square"></div>
     <script src="./freeze-ui.js"></script>
 </body>
 </html>
