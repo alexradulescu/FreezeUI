@@ -1,0 +1,70 @@
+﻿/* CSS RESET
+____________________________________*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin:0; padding:0; border:0; font-size:100%; font:inherit; vertical-align:baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { display:block; }
+
+html { height:100%; font-size:10px; -webkit-overflow-scrolling:touch; }
+
+body { height:100%; line-height:1; font-family:"Raleway", "Roboto", Helvetica, Arial, sans-serif; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; background-color:#0b7285; color:#f8f9fa; }
+
+ol, ul { list-style:none; }
+
+blockquote, q { quotes:none; }
+    blockquote:before, blockquote:after, 
+    q:before, q:after { content:''; content:none; }
+
+table { border-collapse:collapse; border-spacing:0; width:100%; }
+
+input::-ms-clear { display:none; }
+a { color:inherit; }
+a:link, a:visited, a:hover, a:active { text-decoration:none; }
+a:focus, button:focus, input:focus, textarea:focus, select:focus { outline:1px dashed #f8f9fa; }
+
+
+/* NAVIGATION
+____________________________________*/
+.navigation { position:fixed; top:3.6rem; left:0; width:100%; text-align:center; }
+
+
+
+/* UTILITIES
+____________________________________*/
+.button { display:inline-block; line-height:4rem; border:.1rem solid #f8f9fa; border-radius:.2rem; color:#f8f9fa; background-color:#0b7285; padding:0 1.6rem; font-size:1.4rem; text-transform:uppercase; font-weight:600; margin-bottom:1.6rem; cursor:pointer; transition:color .25s, background-color .25s }
+.button:hover { color:#0b7285; background-color:#f8f9fa; }
+.button + .button { margin-left:1.6rem; }
+
+
+/* HERO
+____________________________________*/
+.hero { min-height:100vh; display:flex; align-items:center; justify-content:center; }
+    .hero-center-content { text-align:center; }
+
+
+/* TYPOGRAPHY
+____________________________________*/
+.title { font-size:11.2rem; font-weight:600; line-height:1.3; margin-bottom:2.4rem; }
+.heading-2 { font-size:5.6rem; line-height:1.4; margin:1.6rem 0; }
+.heading-3 { font-size:2.4rem; line-height:1.7; margin:1.6rem 0; }
+.heading-4 { font-size:1.8rem; line-height:1.7; margin:1.6rem 0; }
+.text { font-size:1.6rem; line-height:1.7; margin:1.6rem 0; }
+
+
+/* FOOTER
+____________________________________*/
+.footer { position:fixed; bottom:2.4rem; left:0; width:100%; text-align:center; }
+    .footer-link { display:inline-block; font-size:1.6rem; color:#83c8cf; }
+        .footer-link strong { font-weight:600; }

@@ -1,21 +1,94 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FreezeUI</title>
+	<meta property="og:title" content="FreezeUI">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://hotel-larisa.com/">
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
+	<link href="./style.css" type="text/css" rel="stylesheet">
     <script>
         window.addEventListener('load', () => {
-            document.querySelector('.block').addEventListener('click', () => { 
-                blockUI(); 
-                setTimeout(() => { unblockUI(); }, 2000);    
+            document.querySelector('.action-demo').addEventListener('click', () => { 
+                FreezeUI(); 
+                setTimeout(() => { UnFreezeUI(); }, 2000);    
             });
-            document.querySelector('.block-square').addEventListener('click', () => { blockUI({ selector: '.square', text: "Flying"}); });
-            document.querySelector('.un-block').addEventListener('click', () => { unblockUI(); });
+            document.querySelector('.block-square').addEventListener('click', () => { FreezeUI({ selector: '.square', text: "Flying"}); });
+            document.querySelector('.un-block').addEventListener('click', () => { UnFreezeUI(); });
         });
     </script>
-    <style>
-        .square { width:500px; height:500px; background-color:red; position:relative; }
-    </style>
 </head>
 <body>
+    <nav class="navigation">
+        <a class="button" href="https://github.com/alexandruradulescu/FreezeUI">GitHub</a>
+        <a class="button" href="#spread-the-love">Spread the &nbsp;&#10084;</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-center-content">
+            <h1 class="title">FreezeUI</h1>
+            <h3 class="heading-3">
+                Lightweight, vanilla javascript, micro plugin for freezing/blocking the UI.
+                <br/>
+                No jQuery needed.
+            </h3>
+            <button class="button action-demo">See it in action</button>
+            <a class="button" href="#documentation">Documentation and Download</a>
+            <a class="button" href="https://github.com/alexandruradulescu/FreezeUI/projects/1">Roadmap</a>
+        </div>
+    </section>
+
+    <article class="hero" id="documentation">
+        <div class="hero-content">
+            <h2 class="heading-2">Documentation</h2>
+            <section class="section">
+                <h3 class="heading-3">Download</h3>
+                <p class="text">Go to the GitHub page and download the version which fits you best (ES5 or ES6, full code or minified).</p>
+                <a class="button" href="https://github.com/alexandruradulescu/FreezeUI/">GitHub</a>
+            </section>
+            <section class="section">
+                <h3 class="heading-3">Call the script</h3>
+                <p class="text">Link the downloaded script in the head or at the end of the body as you like</p>
+            </section>
+            <section class="section">
+                <h3 class="heading-3">Freeze the full UI</h3>
+                <p class="text">Simply call the FreezeUI() function similar to the example below.</p>
+            </section>
+            <section class="section">
+                <h3 class="heading-3">Unfreeze the UI</h3>
+                <p class="text">Simply call the UnFreezeUI() function similar to the example below.</p>
+            </section>
+            <section class="section">
+                <h3 class="heading-3">Freeze only a piece of the UI</h3>
+                <p class="text">Call the FreezeUI({selector: '.class-name'}) function while passing an (options) object with the desired selector.</p>
+            </section>
+            <section class="section">
+                <h3 class="heading-3">Custom loading text</h3>
+                <p class="text">Call the FreezeUI({text: 'Magic is happening!'}) function while passing an (options) object with the desired text.</p>
+            </section>
+        </div>
+    </article>
+
+    <section class="hero">
+        <div class="hero-center-content">
+            <h2 class="heading-2">Spread the &nbsp;&#10084;</h2>
+            <h4 class="heading-4">
+                If you like the plugin, feel free to share it forward.
+                <br/>
+                And if it was useful in any projects, especially commercial ones, think about donating something(money or time) to a good cause :-).
+            </h4>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <a href="http://alex-radulescu.com" class="footer-link">Made by <strong>Alex Radulescu</strong></a>
+    </footer>
+
+
     <button class="block">
         Block
     </button>
@@ -26,6 +99,6 @@
         Un-Block
     </button>
     <div class="square"></div>
-    <script src="./o-block-ui.js"></script>
+    <script src="./freeze-ui.js"></script>
 </body>
 </html>
