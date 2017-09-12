@@ -7,7 +7,7 @@
                 blockUI(); 
                 setTimeout(() => { unblockUI(); }, 2000);    
             });
-            document.querySelector('.block-square').addEventListener('click', () => { blockUI('.square'); });
+            document.querySelector('.block-square').addEventListener('click', () => { blockUI({ selector: '.square', text: "Flying"}); });
             document.querySelector('.un-block').addEventListener('click', () => { unblockUI(); });
         });
     </script>

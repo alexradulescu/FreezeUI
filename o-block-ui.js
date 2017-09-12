@@ -4,7 +4,6 @@
     // Setup the element to be appended
     let blockHtml = document.createElement('div');
         blockHtml.classList.add('o-block-ui');
-        blockHtml.setAttribute('data-text', 'Loading');
 
     // Setup style and append it to the head
     let s = document.createElement('style');
@@ -20,13 +19,14 @@
         `;
     document.head.appendChild(s);
 
-    window.blockUI = (selector) => {
-        const parentElement = selector ? document.querySelector(selector) ? document.querySelector(selector) : document.body : document.body;
-        parentElement.appendChild(blockHtml);
+    window.blockUI = (options = { text: 'Loading'}) => {
+        let parent = document.querySelector(options.selector) || document.body;
+        blockHtml.setAttribute('data-text', options.text);
+        parent.appendChild(blockHtml);
     };
     
     window.unblockUI = () => {
-        const element = document.querySelector('.o-block-ui');
+        let element = document.querySelector('.o-block-ui');
         element.parentElement.removeChild(element);
     };
 })();
