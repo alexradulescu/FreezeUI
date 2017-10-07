@@ -10,12 +10,13 @@
 	<meta property="og:url" content="http://hotel-larisa.com/">
 
 	<link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Raleway:400,500,600" rel="stylesheet">
-	<link href="./style.css" type="text/css" rel="stylesheet">
+    <link href="./style.css" type="text/css" rel="stylesheet">
+    <link href="./freeze-ui.css" type="text/css" rel="stylesheet">
     <script>
-        window.addEventListener('load', () => {
+        window.addEventListener('load', () => {            
             document.querySelector('.action-demo').addEventListener('click', () => { 
                 FreezeUI(); 
-                setTimeout(() => { UnFreezeUI(); }, 2000);    
+                setTimeout(() => { UnFreezeUI(); }, 3000);    
             });
         });
     </script>
