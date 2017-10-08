@@ -55,7 +55,7 @@ ____________________________________*/
 /* HERO
 ____________________________________*/
 .hero { min-height:100vh; width:90%; max-width:110rem; min-width:30rem; margin:auto; display:flex; align-items:center; justify-content:center; }
-    .hero-center-content { text-align:center; }
+    .hero-center-content { text-align:center; position:relative; }
 
 
 /* TYPOGRAPHY

@@ -16,9 +16,9 @@
     *   text: 'Magic is happening' -> Choose any text to show or use the default "Loading". Be careful for long text as it will break the design.
     * }
     */
-    window.FreezeUI = (options = { text: 'Loading'}) => {
+    window.FreezeUI = (options = {}) => {
         let parent = document.querySelector(options.selector) || document.body;
-        freezeHtml.setAttribute('data-text', options.text);
+        freezeHtml.setAttribute('data-text', options.text || 'Loading');
         if (document.querySelector(options.selector)) {
             freezeHtml.style.position = 'absolute';
         }
