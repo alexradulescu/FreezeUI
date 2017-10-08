@@ -2,7 +2,7 @@
 FreezeUI is a dead simple, responsive, vanilla javascript loading plugin. 
 No jQuery required.
 
-**Demo and examples:** [alex-radulescu.com/freeze-ui](http://alex-radulescu.com/freeze-ui/)
+**Demo and examples:** [alex-radulescu.com/freeze-ui](http://alexradulescu.github.io/freeze-ui/)
 
 ## Installation
 
