@@ -29,8 +29,8 @@
      * Unfreezes the UI.
      * No options here.
      */
-    window.UnFreezeUI = () => {
-        let element = document.querySelector('.freeze-ui');
+    window.UnFreezeUI = (selector) => {
+        let element = document.querySelector((selector?selector+' ':'')+'.freeze-ui');
         if (element) {
             element.classList.add('is-unfreezing');
             setTimeout(() => {
